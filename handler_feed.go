@@ -66,5 +66,5 @@ func (apicfg *apiConfig) handlerGetFeeds(w http.ResponseWriter, r *http.Request)
 		respondWithError(w, 403, fmt.Sprintf("Couldn't get feeds: %v", err))
 	}
 
-	respondWithJSON(w, 201, databaseFeedToFeeds(feeds))
+	respondWithJSON(w, 201, databaseFeedsToFeeds(feeds))
 }
